@@ -59,7 +59,10 @@ submit1(){
 ngOnInit() {
 }
  
-
+onselect1()
+{
+  this.router.navigate(['login'])
+}
 
  
 

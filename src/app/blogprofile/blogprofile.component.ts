@@ -65,4 +65,9 @@ export class BlogprofileComponent implements OnInit {
       this.router.navigate(['main']);
     });
   }
+  logout(){
+    sessionStorage.removeItem('token');
+  this.httpservice.isLoggedIn(false);
+  this.router.navigate(['login']);
+  }
 }

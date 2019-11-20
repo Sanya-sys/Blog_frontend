@@ -27,10 +27,20 @@
                    
                     <button type="button" class="btn btn-secondary btn-danger text-light ml-auto" (click)="logout()">Log Out</button>
 
-                  </ul>
+                 
                   <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" name="search" [(ngModel)]="value" type="text" placeholder="Search" (keyup)="searchUser(value)">
                       </form>
+                    </ul>
+                    <div class="card gedf-card">
+                        <div class="card-header">
+                            Search Suggestions
+                          </div>
+                          <ul class="list-group list-group-flush" *ngFor="let s of search" (click)="userprofile(s.userid)">
+                            <li class="list-group-item"> @ {{s.username}}<br/><h6 class="text-muted">{{s.firstname}} {{s.lastname}}</h6></li>
+                            
+                          </ul>
+                    </div>
                   </div>
                 </div>
                 </nav>
@@ -75,15 +85,7 @@
                   
                        
                 </div>
-                <div class="card gedf-card">
-                        <div class="card-header">
-                            Search Suggestions
-                          </div>
-                          <ul class="list-group list-group-flush" *ngFor="let s of search" (click)="userprofile(s.userid)">
-                            <li class="list-group-item"> @ {{s.username}}<br/><h6 class="text-muted">{{s.firstname}} {{s.lastname}}</h6></li>
-                            
-                          </ul>
-                    </div>
+             
                 <div class="card-body">
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">

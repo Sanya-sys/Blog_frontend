@@ -1,5 +1,6 @@
 body{
     font-family: 'Open Sans', sans-serif;
+
 }
 *:hover{
     -webkit-transition: all 1s ease;
@@ -8,8 +9,10 @@ body{
 section{
     float:left;
     width:100%;
-    background: #fff;  /* fallback for old browsers */
+    height:730px;
     padding:30px 0;
+    background-image:url("https://res.cloudinary.com/springboard-images/image/upload/q_auto,f_auto,fl_lossy/wordpress/2018/10/blog-how-to-get-into-cybersecurity.png"); 
+
 }
 h1{float:left; width:100%; color:#232323; margin-bottom:30px; font-size: 14px;}
 h1 span{font-family: 'Libre Baskerville', serif; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px; font-weight:700}
