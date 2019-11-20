@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+body,html
+    {
+    background-color: rgb(240,240,240);
+    height:100%;
+    padding:0px; 
+    margin:0px;
+    background-image:url("https://res.cloudinary.com/springboard-images/image/upload/q_auto,f_auto,fl_lossy/wordpress/2018/10/blog-how-to-get-into-cybersecurity.png"); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    }
+.customNav
+    {
+    margin:auto;
+    margin-top:20px;
+    border-radius:55px;
+    background:#262626 !important;
+    width:70%;
+    }
+.customNav p 
+    {
+    color:white;
+    }
+.brand
+    {
+    margin-left:20px;
+    }
+.elements
+    {
+    margin:10px;
+    width:100%;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: flex-end;
+    }
+.elements li
+    {
+    margin-left:15px;
+    margin-right:15px;
+    }
+.elements p:hover
+    {
+    color:grey;
+    transition-timing-function: ease-in-out;
+    transition-duration:0.3s;
+    }
+.nav-link  p 
+    {
+    padding:0px;
+    margin:0px;
+    font-size:1.1em;
+    font-family: 'Nunito Sans', sans-serif;
+    }
+.bottom
+    {
+    background:#1a1a1a;
+    position: absolute;
+    bottom:0px;
+    width:100%;
+    height:120px;
+    color:white;
+    margin:0px;
+    }
+.break
+    {
+    border:0px;
+    height:1px;
+    background:grey;
+    width:70%;
+    display:block;
+    }
+.socials
+    {
+    width:30%;
+    margin:auto;
+    height:50px;
+    margin-top:10px;
+    }
+.socials > i
+    {
+    font-size:1.3em;
+    color:white;
+    transition-duration:0.3s;
+    transition-timing-function: ease-in-out;
+    }
+
+
+.container
+{
+  padding-bottom: 120px;
+  margin:auto;
+}
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+
+.form-signin .btn-google {
+  color: white;
+  background-color:#1a1a1a !important;
+}
+
+
+
+
+
+  .card-signup {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-signup .card-title {
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .card-signup .card-body {
+    padding: 2rem;
+  }
+  
+  .form-signup {
+    width: 100%;
+  }
+  
+ .form-signup .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+
+  }
+  
+  .btn-google {
+    color: white;
+    background-color:#1a1a1a;
+  }
+  
+.buttons
+  {
+  cursor:pointer;
+  overflow:hidden;
+  width:50%;
+  margin:auto;
+  margin-top:5%;
+  border-radius:50px;
+  background-color:white;
+  height:2.5em;
+  transition-property:box-shadow;
+  transition-duration:0.2s;
+  transition-timing-function: ease-in-out;
+  }
+.inner 
+  {
+  text-align:center;
+  width:100%;
+  height:100%;
+  transition-property:background;
+  transition-duration: .5s;
+  transition-timing-function:  ease-in-out;
+  }
+.inner:first-child
+  {
+  border-right:2px solid rgb(221, 220, 220);
+  }
+.inner:nth-child(1):hover
+  {
+  background:#262626;
+  color:white;
+  }
+.inner:nth-child(2):hover
+  {
+  background: #262626;
+  color:white;
+  }
+.buttons:hover
+  {
+  box-shadow: 0px 5px 10px rgb(220,220,220);
+  }
+.buttons h5
+  {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bolder;
+  text-align:center;
+  margin:0px;
+  padding:0px;
+  }
+@media only screen and (max-width: 600px) {
+  
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+}
+.p{
+background-color:#1a1a1a;
+}
+</style>
+    </head>
+    <body>
+      <div style='height: 100%;position:relative;padding:0px;'>
+          <nav class="navbar navbar-expand-sm navbar-dark bg-light customNav">
+              <a class="navbar-brand brand" href="#">
+                 <h4 style="font-family:'Kalam';"><i>ShoppingBee!</i></h4>
+              </a>
+      
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+                <ul class="navbar-nav elements">
+                  <li (click)="onselect4()" class="nav-item active">
+                    <a class="nav-link" href="home"> <p>Home</p> <span class="sr-only">(current)</span></a>
+                  </li>
+                  
+                  <li (click)="onselect5()" class="nav-item">
+                    <a class="nav-link" href="login "><p>Login</p></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class='d-flex flex-row justify-content-around align-items-center buttons'>
+              <div (click)=onselect1() class='d-flex flex-row justify-content-around align-items-center inner'>
+                <h5>Login</h5>
+              </div>
+              <div class='d-flex flex-row justify-content-around align-items-center inner'>
+                <h5>Register</h5>
+              </div>
+            </div>
+
+            <div> 
+              <div id='signIn' class="container">
+                <div class="row">
+                  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card card-signin my-5">
+                      <div class="card-body">
+                        <h5 class="card-title text-center">Sign In</h5>
+                        
+                        <form action="/action_page.php" class="was-validated">
+                                
+                                <div class="form-group">
+                                  <input type="text"  class="form-control" placeholder="Full Name" name="username"  [(ngModel)]="username" (change)="change(username)" required>
+                                  <span style="color:red; margin : 20px;">{{alert}}</span>
+                                  <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text"  class="form-control" placeholder="First Name" name="username" [(ngModel)]="firstname" required>
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="text"  class="form-control" placeholder="Last Name" name="username" [(ngModel)]="lastname" required>
+                                  </div>
+                                <div class="form-group">
+                                        <input type="email"  class="form-control" placeholder="Email Address" title="exapmle@domain.com" name="email"  [(ngModel)]="email" required>
+                                        <div class="valid-feedback">Email Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>  
+            
+                               
+                                
+                                <div class="form-group">
+                                        <input  id='firstPass' type="password" value='' class="form-control password" placeholder="Password" name="password" [(ngModel)]="password" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Please fill out this field.</div>
+                                </div> 
+            
+                                <div class="form-group">
+                                        <input id='secondPass' type="password"  value = '' class="form-control confirm_password" placeholder="Confirm Password" name="confirm_pswd" required>
+                                </div>  
+                                <button id='reg' class="btn btn-lg btn-dark btn-block text-uppercase" type="submit" (click)="submit1()" [disabled]="validate">Register</button>  
+                                <button class="btn btn-lg btn-dark btn-block text-uppercase" type="submit"><i class="fa fa-google-plus-g"></i> Sign up with Google</button>
+                              </form>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+
+
+              
+            </div>
+        
+      <div class="d-flex flex-column align-items-center bottom">
+                <div class = "d-flex flex-row justify-content-around align-items-center socials">
+                  <i class="fa fa-facebook"></i>
+                  <i class="fa fa-youtube"></i>
+                  <i class="fa fa-instagram"></i>
+                  <i class="fa fa-twitter"></i>
+                </div>
+                <hr class='break'/>
+                <p style='color:grey;font-size:0.7em;margin:10px;'>DEVELOPED BY CODE BENDERS</p>
+            </div>
+      </div>   
+           
+    </body>
+</html>
+
